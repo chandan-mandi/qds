@@ -34,7 +34,7 @@ const USPPackages = [
     id: 1,
     title: "faculty through our 24*7 Live system",
     description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
-    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+    img: "https://i.ibb.co/hcbZ0pf/videoconference.png"
   },
   {
     id: 2,
@@ -46,13 +46,13 @@ const USPPackages = [
     id: 3,
     title: "Master Workshops",
     description: "Get the best study materials available for GMAT with answers and explanations. Get hours of quality practice in our e-learning platform",
-    img: "https://cdn-icons.flaticon.com/png/512/4823/premium/4823358.png?token=exp=1647898669~hmac=539ff650881da7a3d567c57fba067413"
+    img: "https://i.ibb.co/LxtQhVF/workshop.png"
   },
   {
     id: 4,
     title: "Live Reviser Classes",
     description: "1000+ practice questions of GMAT with answers and explanations Get hours of quality practice in our e-learning platform",
-    img: "https://cdn-icons.flaticon.com/png/512/4646/premium/4646944.png?token=exp=1647898645~hmac=fe370b5660bd46d8c3a284ec9c63821d"
+    img: "https://i.ibb.co/Swhfx0b/video-lecture.png"
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ const conceptualUnderstandings = [
     id: 1,
     title: "Concepts covered from the very basics",
     description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
-    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+    img: "https://i.ibb.co/hcbZ0pf/videoconference.png"
   },
   {
     id: 2,
@@ -84,7 +84,7 @@ const conceptualUnderstandings = [
     id: 3,
     title: "Higly Qualified and Experience Faculty",
     description: "Get the best study materials available for GMAT with answers and explanations. Get hours of quality practice in our e-learning platform",
-    img: "https://cdn-icons.flaticon.com/png/512/4823/premium/4823358.png?token=exp=1647898669~hmac=539ff650881da7a3d567c57fba067413"
+    img: "https://i.ibb.co/LxtQhVF/workshop.png"
   },
 ]
 const applications = [
@@ -98,7 +98,7 @@ const applications = [
     id: 1,
     title: "Huge Study Library",
     description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
-    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+    img: "https://i.ibb.co/hcbZ0pf/videoconference.png"
   },
   {
     id: 2,
@@ -110,13 +110,13 @@ const applications = [
     id: 3,
     title: "Detailed Explanatory Answers and Video Solutions",
     description: "Get the best study materials available for GMAT with answers and explanations. Get hours of quality practice in our e-learning platform",
-    img: "https://cdn-icons.flaticon.com/png/512/4823/premium/4823358.png?token=exp=1647898669~hmac=539ff650881da7a3d567c57fba067413"
+    img: "https://i.ibb.co/Swhfx0b/video-lecture.png"
   },
   {
     id: 4,
     title: "Live Online Doubt Solving Sessions",
     description: "Get the best study materials available for GMAT with answers and explanations. Get hours of quality practice in our e-learning platform",
-    img: "https://cdn-icons.flaticon.com/png/512/4823/premium/4823358.png?token=exp=1647898669~hmac=539ff650881da7a3d567c57fba067413"
+    img: "https://i.ibb.co/LxtQhVF/workshop.png"
   },
 ]
 const testings = [
@@ -130,7 +130,7 @@ const testings = [
     id: 1,
     title: "Analytics",
     description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
-    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+    img: "https://i.ibb.co/LxtQhVF/workshop.png"
   },
 ]
 const utilities = [
@@ -144,13 +144,13 @@ const utilities = [
     id: 1,
     title: "Exam-Related Alerts",
     description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
-    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+    img: "https://i.ibb.co/LxtQhVF/workshop.png"
   },
   {
     id: 2,
     title: "Discussion Forum",
     description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
-    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+    img: "https://i.ibb.co/hcbZ0pf/videoconference.png"
   },
 ]
 
