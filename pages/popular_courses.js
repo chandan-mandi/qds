@@ -21,6 +21,139 @@ import Link from "next/link";
 import UpcomingBatches from "./upcoming_batches";
 import $ from "jquery";
 import CourseCard from "../components/Card/CourseCard";
+import KeyHighlightCard from "../components/Card/KeyHighlightCard";
+
+const USPPackages = [
+  {
+    id: 0,
+    title: "Personalised AI-Powered Tools",
+    description: "54+ hours of live online sessions where you can directly interact with experts and get your doubts resolved",
+    img: "https://i.ibb.co/nfsNGhg/rechargeable.png"
+  },
+  {
+    id: 1,
+    title: "faculty through our 24*7 Live system",
+    description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
+    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+  },
+  {
+    id: 2,
+    title: "Exclusive Student Progress Tracking Software",
+    description: "Procoted workshops on Critical Reasoning Reading Comprehension Sentence Correction Problem Solving and Data Sufficiency",
+    img: "https://cdn-icons-png.flaticon.com/512/3273/3273399.png"
+  },
+  {
+    id: 3,
+    title: "Master Workshops",
+    description: "Get the best study materials available for GMAT with answers and explanations. Get hours of quality practice in our e-learning platform",
+    img: "https://cdn-icons.flaticon.com/png/512/4823/premium/4823358.png?token=exp=1647898669~hmac=539ff650881da7a3d567c57fba067413"
+  },
+  {
+    id: 4,
+    title: "Live Reviser Classes",
+    description: "1000+ practice questions of GMAT with answers and explanations Get hours of quality practice in our e-learning platform",
+    img: "https://cdn-icons.flaticon.com/png/512/4646/premium/4646944.png?token=exp=1647898645~hmac=fe370b5660bd46d8c3a284ec9c63821d"
+  },
+  {
+    id: 5,
+    title: "Power-Packed Testing System",
+    description: "Balance the demands of your job/ college and GMAT preparation with late night swssions (from 21:00-23:00 hrs) & option of Weekend classes.",
+    img: "https://cdn-icons-png.flaticon.com/512/2942/2942707.png"
+  },
+]
+const conceptualUnderstandings = [
+  {
+    id: 0,
+    title: "Personalised Batches of only 4-5 students",
+    description: "54+ hours of live online sessions where you can directly interact with experts and get your doubts resolved",
+    img: "https://i.ibb.co/nfsNGhg/rechargeable.png"
+  },
+  {
+    id: 1,
+    title: "Concepts covered from the very basics",
+    description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
+    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+  },
+  {
+    id: 2,
+    title: "Recorded Live Classes",
+    description: "Procoted workshops on Critical Reasoning Reading Comprehension Sentence Correction Problem Solving and Data Sufficiency",
+    img: "https://cdn-icons-png.flaticon.com/512/3273/3273399.png"
+  },
+  {
+    id: 3,
+    title: "Higly Qualified and Experience Faculty",
+    description: "Get the best study materials available for GMAT with answers and explanations. Get hours of quality practice in our e-learning platform",
+    img: "https://cdn-icons.flaticon.com/png/512/4823/premium/4823358.png?token=exp=1647898669~hmac=539ff650881da7a3d567c57fba067413"
+  },
+]
+const applications = [
+  {
+    id: 0,
+    title: "Access to QDS Pro Online Prep Portal",
+    description: "54+ hours of live online sessions where you can directly interact with experts and get your doubts resolved",
+    img: "https://i.ibb.co/nfsNGhg/rechargeable.png"
+  },
+  {
+    id: 1,
+    title: "Huge Study Library",
+    description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
+    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+  },
+  {
+    id: 2,
+    title: "Question Banks, Practice Worksheets",
+    description: "Procoted workshops on Critical Reasoning Reading Comprehension Sentence Correction Problem Solving and Data Sufficiency",
+    img: "https://cdn-icons-png.flaticon.com/512/3273/3273399.png"
+  },
+  {
+    id: 3,
+    title: "Detailed Explanatory Answers and Video Solutions",
+    description: "Get the best study materials available for GMAT with answers and explanations. Get hours of quality practice in our e-learning platform",
+    img: "https://cdn-icons.flaticon.com/png/512/4823/premium/4823358.png?token=exp=1647898669~hmac=539ff650881da7a3d567c57fba067413"
+  },
+  {
+    id: 4,
+    title: "Live Online Doubt Solving Sessions",
+    description: "Get the best study materials available for GMAT with answers and explanations. Get hours of quality practice in our e-learning platform",
+    img: "https://cdn-icons.flaticon.com/png/512/4823/premium/4823358.png?token=exp=1647898669~hmac=539ff650881da7a3d567c57fba067413"
+  },
+]
+const testings = [
+  {
+    id: 0,
+    title: "Mock Tests",
+    description: "54+ hours of live online sessions where you can directly interact with experts and get your doubts resolved",
+    img: "https://i.ibb.co/nfsNGhg/rechargeable.png"
+  },
+  {
+    id: 1,
+    title: "Analytics",
+    description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
+    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+  },
+]
+const utilities = [
+  {
+    id: 0,
+    title: "Study Planner",
+    description: "54+ hours of live online sessions where you can directly interact with experts and get your doubts resolved",
+    img: "https://i.ibb.co/nfsNGhg/rechargeable.png"
+  },
+  {
+    id: 1,
+    title: "Exam-Related Alerts",
+    description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
+    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+  },
+  {
+    id: 2,
+    title: "Discussion Forum",
+    description: "7 full length adaptive mock test powered by Veritas Prep to help you prepare for the real test scenario",
+    img: "https://cdn-icons.flaticon.com/png/512/2980/premium/2980980.png?token=exp=1647898415~hmac=299081219b583e431cefe5b4f834798a"
+  },
+]
+
 const CATPackages = [
   {
     id: 0,
@@ -412,30 +545,30 @@ const SATPackages = [
   },
 ];
 
- const data = [
-        {
-            id: 1,
-            desc: "Stay connected to your facultythrough our 24*7 Live System(Mentor-Student Relation)",
-        },
+const data = [
+  {
+    id: 1,
+    desc: "Stay connected to your facultythrough our 24*7 Live System(Mentor-Student Relation)",
+  },
 
-        {
-            id: 2,
-            desc: "Exclusive Student Progress Tracking Software",
-        },
+  {
+    id: 2,
+    desc: "Exclusive Student Progress Tracking Software",
+  },
 
-        {
-            id: 3,
-            desc: "Master Workshops (Mental Math, Brainstorming, ...)",
-        },
-        {
-            id: 4,
-            desc: "Live Reviser Classes",
-        },
-         {
-            id: 5,
-            desc: "Power-Packed Testing System (Full-length, Sectional, Topic-wise, Challenger, Speed Enhancement & Remedial Tests; Tests Generator Tool, Challenge your Friends,...)",
-        },
-    ];
+  {
+    id: 3,
+    desc: "Master Workshops (Mental Math, Brainstorming, ...)",
+  },
+  {
+    id: 4,
+    desc: "Live Reviser Classes",
+  },
+  {
+    id: 5,
+    desc: "Power-Packed Testing System (Full-length, Sectional, Topic-wise, Challenger, Speed Enhancement & Remedial Tests; Tests Generator Tool, Challenge your Friends,...)",
+  },
+];
 
 const ExamsExcelWrapper = styled.div`
   display: flex;
@@ -521,7 +654,7 @@ const PopularCourses = (props) => {
   const handleRegister = () => {
     $("#register_seminar").modal();
   };
-  
+
   const controlAccordionButtons = (i) => {
     for (let j = 0; j < program.length; j++) {
       let icon_id = "#plus-icon-" + j.toString();
@@ -802,8 +935,8 @@ const PopularCourses = (props) => {
             </ExamsExcelWrapper>
 
             {/* The section is made for new feature's in GMAT SubMenu  */}
-            { activeFeatureTab === 1 && (
-             <div style={{ width: "100%" }} className="section-wrapper">
+            {activeFeatureTab === 1 && (
+              <div style={{ width: "100%" }} className="section-wrapper">
                 <ExamsExcelWrapper
                   data-aos="fade-down"
                   data-aos-duration="500"
@@ -832,11 +965,11 @@ const PopularCourses = (props) => {
                     <span>Enquiry</span>
                   </Box>
                 </ExamsExcelWrapper>
-               </div>   
-           )}
-           {/* Coaching classes submenu  */}
-            { activeFeatureTab === 2 && (
-             <div style={{ width: "100%" }} className="section-wrapper">
+              </div>
+            )}
+            {/* Coaching classes submenu  */}
+            {activeFeatureTab === 2 && (
+              <div style={{ width: "100%" }} className="section-wrapper">
                 <ExamsExcelWrapper
                   data-aos="fade-down"
                   data-aos-duration="500"
@@ -872,11 +1005,11 @@ const PopularCourses = (props) => {
                     <span>Enquiry</span>
                   </Box>
                 </ExamsExcelWrapper>
-               </div>   
-           )}
-           {/* Video Lectures submenu  */}
-            { activeFeatureTab === 3 && (
-             <div style={{ width: "100%" }} className="section-wrapper">
+              </div>
+            )}
+            {/* Video Lectures submenu  */}
+            {activeFeatureTab === 3 && (
+              <div style={{ width: "100%" }} className="section-wrapper">
                 <ExamsExcelWrapper
                   data-aos="fade-down"
                   data-aos-duration="500"
@@ -926,10 +1059,10 @@ const PopularCourses = (props) => {
                     <span>Enquire</span>
                   </Box>
                 </ExamsExcelWrapper>
-               </div>   
-           )}
-            { activeFeatureTab === 4 && (
-             <div style={{ width: "100%" }} className="section-wrapper">
+              </div>
+            )}
+            {activeFeatureTab === 4 && (
+              <div style={{ width: "100%" }} className="section-wrapper">
                 <ExamsExcelWrapper
                   data-aos="fade-down"
                   data-aos-duration="500"
@@ -972,424 +1105,477 @@ const PopularCourses = (props) => {
                     <span>Enquire</span>
                   </Box>
                 </ExamsExcelWrapper>
-               </div>   
-           )}
-           {/* The section is made for new feture's in the GMAT section To check the edit below logic */} 
-
-           { activeTab === 7 && (
-             <div style={{ width: "80%" }} className="section-wrapper">
-                <ExamsExcelWrapper
-                  data-aos="fade-down"
-                  data-aos-duration="500"
-                  data-aos-easing="ease-in-linear"
-                  style={{ padding: 0 }}
-                >
-                  <Box
-                    submenu
-                    active={activeTab === 1}
-                    onClick={() => setActiveTab(1)}
-                  >
-                    <span>Key Highlights</span>
-                  </Box>
-                  <Box
-                    submenu
-                    active={activeTab === 2}
-                    onClick={() => setActiveTab(2)}
-                  >
-                    <span>Our Packages</span>
-                  </Box>
-                  <Box
-                    submenu
-                    active={activeTab === 3}
-                    onClick={() => setActiveTab(3)}
-                  >
-                    <span>Enquiry</span>
-                  </Box>
-                </ExamsExcelWrapper>
-               </div>   
-           )}
-           
-           { activeFeatureTab === 6 && (
-             <div style={{ width: "80%" }} className="section-wrapper">
-                <ExamsExcelWrapper
-                  data-aos="fade-down"
-                  data-aos-duration="500"
-                  data-aos-easing="ease-in-linear"
-                  style={{ padding: 0 }}
-                >
-                  <Box
-                    active={activeTab === 1}
-                    onClick={() => setActiveTab(1)}
-                  >
-                    <span>Key Highlights</span>
-                  </Box>
-                  <Box
-                    active={activeTab === 2}
-                    onClick={() => setActiveTab(2)}
-                  >
-                    <span>Our Packages</span>
-                  </Box>
-                  <Box
-                    active={activeTab === 3}
-                    onClick={() => setActiveTab(3)}
-                  >
-                    <span>Enquiry</span>
-                  </Box>
-                </ExamsExcelWrapper>
-               </div>   
-           )}
-           
-           
-          { activeFeatureTab === 7 && activeTab === 8 && ( 
-               <div>
-               <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
-                  <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
-                  </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
-                    </div>
-                    ))}
-            </div>
-            </div>
-            <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
-                  <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
-                  </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
-                    </div>
-                    ))}
-            </div>
-            </div>
-
-            <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
-                  <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
-                  </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
-                    </div>
-                    ))}
-            </div>
-            </div>
-
-            <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
-                  <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
-                  </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
-                    </div>
-                    ))}
-            </div>
-            </div>
-
-            <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
-                  <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
-                  </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
-                    </div>
-                    ))}
-            </div>
-            </div>
-             </div>
+              </div>
             )}
-            
-            { activeFeatureTab === 9 && activeTab === 10 && ( 
+            {/* The section is made for new feture's in the GMAT section To check the edit below logic */}
+
+            {activeTab === 7 && (
+              <div style={{ width: "80%" }} className="section-wrapper">
+                <ExamsExcelWrapper
+                  data-aos="fade-down"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-in-linear"
+                  style={{ padding: 0 }}
+                >
+                  <Box
+                    submenu
+                    active={activeTab === 1}
+                    onClick={() => setActiveTab(1)}
+                  >
+                    <span>Key Highlights</span>
+                  </Box>
+                  <Box
+                    submenu
+                    active={activeTab === 2}
+                    onClick={() => setActiveTab(2)}
+                  >
+                    <span>Our Packages</span>
+                  </Box>
+                  <Box
+                    submenu
+                    active={activeTab === 3}
+                    onClick={() => setActiveTab(3)}
+                  >
+                    <span>Enquiry</span>
+                  </Box>
+                </ExamsExcelWrapper>
+              </div>
+            )}
+
+            {activeFeatureTab === 6 && (
+              <div style={{ width: "80%" }} className="section-wrapper">
+                <ExamsExcelWrapper
+                  data-aos="fade-down"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-in-linear"
+                  style={{ padding: 0 }}
+                >
+                  <Box
+                    active={activeTab === 1}
+                    onClick={() => setActiveTab(1)}
+                  >
+                    <span>Key Highlights</span>
+                  </Box>
+                  <Box
+                    active={activeTab === 2}
+                    onClick={() => setActiveTab(2)}
+                  >
+                    <span>Our Packages</span>
+                  </Box>
+                  <Box
+                    active={activeTab === 3}
+                    onClick={() => setActiveTab(3)}
+                  >
+                    <span>Enquiry</span>
+                  </Box>
+                </ExamsExcelWrapper>
+              </div>
+            )}
+
+
+            {activeFeatureTab === 7 && activeTab === 8 && (
               <div>
-               <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
                   <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
-                  </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
                     </div>
+                  </div>
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
                     ))}
-            </div>
-            </div>
+                  </div>
+                </div>
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                  <div className="col-md text-center sub-heading">
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
+                    </div>
+                  </div>
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-            <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
                   <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
-                  </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
                     </div>
+                  </div>
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
                     ))}
-            </div>
-            </div>
+                  </div>
+                </div>
 
-            <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
                   <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
-                  </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
                     </div>
+                  </div>
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
                     ))}
-            </div>
-            </div>
+                  </div>
+                </div>
 
-            <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
                   <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
-                  </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
                     </div>
-                    ))}
-            </div>
-            </div>
-
-            <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
-                  <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
                   </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
-                    </div>
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
                     ))}
-            </div>
-            </div>
-
-              <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
-                  <div className="col-md text-center sub-heading">
-                         <div className="row">
-                             <h2 style={{ width:"100%", textAlign:"center" }} >UPSs</h2>
-                         </div>
                   </div>
-            <div className="cards secon-confld text-center" style={{marginRight: "-15px" , marginLeft:"-15px"}}>
-                {data.map((d)=>(
-                    <div className="col-sm-4 col-md-4">
-                          <div className="boxex-con">
-                           <p>{d.desc}</p>
-                          </div> 
-                    </div>
-                    ))}
-            </div>
-            </div>
-             </div>
-            )}
-            
-            {activeFeatureTab === 1 && (
-              <>
-              <div style={{width: '100%'}}>
-                <div className="row" style={{padding: '0 100px !important'}}>
-                {
-                      GMATPackages.map((gmatPackage) => (
-                        <CourseCard key={gmatPackage.id} gmatPackage={gmatPackage}/>
-                      ))
-                    }
                 </div>
               </div>
-              <div
-                className="container"
-                data-aos="fade-left"
-                data-aos-delay="0"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-linear"
-                style={{margin: 0, padding: 0}}
-              >
-                <div className="row">
-                    
-                  <div className="col-12 our-course-points">
-                    <h2
-                      data-aos="fade-right"
-                      data-aos-duration="1000"
-                      data-aos-easing="ease-in-linear"
-                      className="section-points"
-                    >
-                      Download Prospectus
-                    </h2>
+            )}
+
+            {activeFeatureTab === 9 && activeTab === 10 && (
+              <div>
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                  <div className="col-md text-center sub-heading">
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
+                    </div>
                   </div>
-                  {
-                    //    course !== "MAH-CET" &&
-                    <div className=" col-sm-5">
-                      <div
-                        data-aos="zoom-out"
-                        data-aos-delay="200"
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                  <div className="col-md text-center sub-heading">
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
+                    </div>
+                  </div>
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                  <div className="col-md text-center sub-heading">
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
+                    </div>
+                  </div>
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                  <div className="col-md text-center sub-heading">
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
+                    </div>
+                  </div>
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                  <div className="col-md text-center sub-heading">
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
+                    </div>
+                  </div>
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-linear" className="aos-init aos-animate">
+                  <div className="col-md text-center sub-heading">
+                    <div className="row">
+                      <h2 style={{ width: "100%", textAlign: "center" }} >UPSs</h2>
+                    </div>
+                  </div>
+                  <div className="cards secon-confld text-center" style={{ marginRight: "-15px", marginLeft: "-15px" }}>
+                    {data.map((d) => (
+                      <div className="col-sm-4 col-md-4">
+                        <div className="boxex-con">
+                          <p>{d.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeFeatureTab === 1 && activeTab === 1 && (
+              <>
+                <div style={{ width: '100%' }}>
+                  <h1 style={{ textAlign: 'center' }}>Our USP's</h1>
+                  <div className="row" style={{ padding: '0 100px !important' }}>
+                    {
+                      USPPackages.map((singleUSP) => (
+                        // <CourseCard key={gmatPackage.id} gmatPackage={gmatPackage}/>
+                        <KeyHighlightCard key={singleUSP.id} singleUSP={singleUSP} />
+
+                      ))
+                    }
+                  </div>
+                </div>
+                <div style={{ width: '100%' }}>
+                  <h1 style={{ textAlign: 'center', marginTop: '80px'}}>CONCEPTUAL UNDERSTANDING</h1>
+                  <div className="row" style={{ padding: '0 100px !important' }}>
+                    {
+                      conceptualUnderstandings.map((conceptualUnderstanding) => (
+                        // <CourseCard key={gmatPackage.id} gmatPackage={gmatPackage}/>
+                        <KeyHighlightCard key={conceptualUnderstanding.id} singleUSP={conceptualUnderstanding} />
+                      ))
+                    }
+                  </div>
+                </div>
+                <div style={{ width: '100%' }}>
+                  <h1 style={{ textAlign: 'center', marginTop: '80px'}}>APPLICATION</h1>
+                  <div className="row" style={{ padding: '0 100px !important' }}>
+                    {
+                      applications.map((singleUSP) => (
+                        // <CourseCard key={gmatPackage.id} gmatPackage={gmatPackage}/>
+                        <KeyHighlightCard key={singleUSP.id} singleUSP={singleUSP} />
+
+                      ))
+                    }
+                  </div>
+                </div>
+                <div style={{ width: '100%' }}>
+                  <h1 style={{ textAlign: 'center', marginTop: '80px'}}>TESTING</h1>
+                  <div className="row" style={{ padding: '0 100px !important' }}>
+                    {
+                      testings.map((singleUSP) => (
+                        // <CourseCard key={gmatPackage.id} gmatPackage={gmatPackage}/>
+                        <KeyHighlightCard key={singleUSP.id} singleUSP={singleUSP} />
+
+                      ))
+                    }
+                  </div>
+                </div>
+                <div style={{ width: '100%' }}>
+                  <h1 style={{ textAlign: 'center', marginTop: '80px'}}>UTILITIES</h1>
+                  <div className="row" style={{ padding: '0 100px !important' }}>
+                    {
+                      utilities.map((singleUSP) => (
+                        // <CourseCard key={gmatPackage.id} gmatPackage={gmatPackage}/>
+                        <KeyHighlightCard key={singleUSP.id} singleUSP={singleUSP} />
+
+                      ))
+                    }
+                  </div>
+                </div>
+                <div
+                  className="container"
+                  data-aos="fade-left"
+                  data-aos-delay="0"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-linear"
+                  style={{ margin: 0, padding: 0 }}
+                >
+                  <div className="row">
+
+                    <div className="col-12 our-course-points">
+                      <h2
+                        data-aos="fade-right"
                         data-aos-duration="1000"
                         data-aos-easing="ease-in-linear"
+                        className="section-points"
                       >
-                        <div class="card">
-                          <img
-                            class="card-img-top"
-                            src={prospectus.img}
-                            alt={course + " Prospectus"}
-                            style={{
-                              borderLeft: "1px solid black",
-                              borderRight: "1px solid black",
-                            }}
-                          />
-                          <div
-                            class="card-body"
-                            style={{
-                              display:"flex",
-                              justifyContent: "space-evenly",     
-                              borderLeft: "1px solid black",
-                              borderRight: "1px solid black",
-                              borderBottom: "2px solid black",
-                            }}
+                        Download Prospectus
+                      </h2>
+                    </div>
+                    {
+                      //    course !== "MAH-CET" &&
+                      <div className=" col-sm-5">
+                        <div
+                          data-aos="zoom-out"
+                          data-aos-delay="200"
+                          data-aos-duration="1000"
+                          data-aos-easing="ease-in-linear"
+                        >
+                          <div class="card">
+                            <img
+                              class="card-img-top"
+                              src={prospectus.img}
+                              alt={course + " Prospectus"}
+                              style={{
+                                borderLeft: "1px solid black",
+                                borderRight: "1px solid black",
+                              }}
+                            />
+                            <div
+                              class="card-body"
+                              style={{
+                                display: "flex",
+                                justifyContent: "space-evenly",
+                                borderLeft: "1px solid black",
+                                borderRight: "1px solid black",
+                                borderBottom: "2px solid black",
+                              }}
 
                             // style={{
                             //   border: "1px solid black",
                             //   borderTop: "0px",
                             // }}
-                          >
-                            {/* <a href={prospectus.pdf} download={course.toLowerCase() + "_prep_prospectus"}>Download</a> */}
-                            <button
-                              data-toggle="modal"
-                              data-target="#download_files"
-                              className="btn btn-sm float-right"
                             >
-                              Download{" "}
-                              <i class="fa fa-download" aria-hidden="true"></i>
-                            </button>
-                          { course === "GMAT" ? (
-                            <button
-                              data-toggle="modal"
-                              data-target="#shareGmat"
-                              className="btn btn-sm float-right"
-                            >
-                              Share{" "}
-                              <i class="fa fa-share" aria-hidden="true"></i>
-                            </button> ) : ( "" ) }
-                           { course === "CAT" ? (
-                            <button
-                              data-toggle="modal"
-                              data-target="#shareCat"
-                              className="btn btn-sm float-right"
-                            >
-                              Share{" "}
-                              <i class="fa fa-share" aria-hidden="true"></i>
-                            </button> ) : ( "" ) }
-                            { course === "GRE" ? (
-                            <button
-                              data-toggle="modal"
-                              data-target="#shareGre"
-                              className="btn btn-sm float-right"
-                            >
-                              Share{" "}
-                              <i class="fa fa-share" aria-hidden="true"></i>
-                            </button> ) : ( "" ) }
-                             { course === "SAT" ? (
-                            <button
-                              data-toggle="modal"
-                              data-target="#shareSat"
-                              className="btn btn-sm float-right"
-                            >
-                              Share{" "}
-                              <i class="fa fa-share" aria-hidden="true"></i>
-                            </button> ) : ( "" ) }
-                              { course === "MAH-CET" ? (
-                            <button
-                              data-toggle="modal"
-                              data-target="#shareMahcet"
-                              className="btn btn-sm float-right"
-                            >
-                              Share{" "}
-                              <i class="fa fa-share" aria-hidden="true"></i>
-                            </button> ) : ( "" ) }
+                              {/* <a href={prospectus.pdf} download={course.toLowerCase() + "_prep_prospectus"}>Download</a> */}
+                              <button
+                                data-toggle="modal"
+                                data-target="#download_files"
+                                className="btn btn-sm float-right"
+                              >
+                                Download{" "}
+                                <i class="fa fa-download" aria-hidden="true"></i>
+                              </button>
+                              {course === "GMAT" ? (
+                                <button
+                                  data-toggle="modal"
+                                  data-target="#shareGmat"
+                                  className="btn btn-sm float-right"
+                                >
+                                  Share{" "}
+                                  <i class="fa fa-share" aria-hidden="true"></i>
+                                </button>) : ("")}
+                              {course === "CAT" ? (
+                                <button
+                                  data-toggle="modal"
+                                  data-target="#shareCat"
+                                  className="btn btn-sm float-right"
+                                >
+                                  Share{" "}
+                                  <i class="fa fa-share" aria-hidden="true"></i>
+                                </button>) : ("")}
+                              {course === "GRE" ? (
+                                <button
+                                  data-toggle="modal"
+                                  data-target="#shareGre"
+                                  className="btn btn-sm float-right"
+                                >
+                                  Share{" "}
+                                  <i class="fa fa-share" aria-hidden="true"></i>
+                                </button>) : ("")}
+                              {course === "SAT" ? (
+                                <button
+                                  data-toggle="modal"
+                                  data-target="#shareSat"
+                                  className="btn btn-sm float-right"
+                                >
+                                  Share{" "}
+                                  <i class="fa fa-share" aria-hidden="true"></i>
+                                </button>) : ("")}
+                              {course === "MAH-CET" ? (
+                                <button
+                                  data-toggle="modal"
+                                  data-target="#shareMahcet"
+                                  className="btn btn-sm float-right"
+                                >
+                                  Share{" "}
+                                  <i class="fa fa-share" aria-hidden="true"></i>
+                                </button>) : ("")}
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  }
-                  <br></br><br></br>
-                  <div className="col-12 our-course-points">
-                    <h2
-                      data-aos="fade-right"
-                      data-aos-duration="1000"
-                      data-aos-easing="ease-in-linear"
-                      className="section-points"
-                    >
-                      <span
-                        className="clickable-text"
-                        data-toggle="modal"
-                        data-target="#recordedDemo"
-                      >
-                        Request a Free Recorded Demo <br/> <br/>
-                      </span>
-                       
-                     
-                      <span
-                        className="clickable-text"
-                        data-toggle="modal"
-                        data-target="#enroll"
-                      >
-                        Wish to Enroll ?
-                      </span>
-                    </h2>
+                    }
+                    <br></br><br></br>
+                    
+
                   </div>
-                  
                 </div>
-              </div>
               </>
             )}
 
+            {activeFeatureTab === 1 && activeTab === 3 &&(
+              <div className="col-12 our-course-points">
+              <h2
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-linear"
+                className="section-points"
+              >
+                <span
+                  className="clickable-text"
+                  data-toggle="modal"
+                  data-target="#recordedDemo"
+                >
+                  Request a Free Recorded Demo <br /> <br />
+                </span>
+
+
+                <span
+                  className="clickable-text"
+                  data-toggle="modal"
+                  data-target="#enroll"
+                >
+                  Wish to Enroll ?
+                </span>
+              </h2>
+            </div>
+            )}
             {activeFeatureTab === 2 && (
               <div className="section-wrapper container-fluid">
                 <div className="accordion" id="package-accordion">
@@ -1527,7 +1713,7 @@ const PopularCourses = (props) => {
                 <CompareOnlinePrepCompanies />
               </div>
             )}
-             {(activeFeatureTab === 5 && course === "GMAT" && (
+            {(activeFeatureTab === 5 && course === "GMAT" && (
               <AboutGMAT></AboutGMAT>
             )) ||
               (activeFeatureTab === 5 && course === "CAT" && (

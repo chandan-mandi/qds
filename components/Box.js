@@ -18,7 +18,7 @@ const Box = styled.div`
   margin: 5px;
   cursor: pointer;
   outline: 0;
-  background-color: ${props => props.submenu === true ? '#4470c8' : '#192f5a'};
+  background-color: ${props => props.submenu === true ? '#1981c1' : '#192f5a'};
   ${props => props.active && css`background-image: linear-gradient(to right, #77bf43 48%, #7ac042 66%, #83c340 78%, #93c83c 89%, #a9cf37 100%, #aacf37);` }
   // ${props => props.active && props.submenu &&  css`background-image: linear-gradient(to right,#1f8c5a 48%,#3ebf62 66%,#40c350 78%,#3cc869 89%,#37cf3b 100%,#37cfa0);`}
   
